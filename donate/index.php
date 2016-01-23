@@ -67,13 +67,21 @@ label{
 
 </head>
 <body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-small">
-
 <div class="grid ng-scope">
-	<div class="span-1-1 c no-pad top-space">
-		<img class="user-avatar" ng-src="https://www.prazor.com/images/heart_icon.svg" src="images/heart_icon.svg">		
+	<div class="span-1-1 c top-space">
+		<div class="span-1-6">
+			<p><a href="http://www.prazor.com/"><img src="/images/back_arrow_icon.svg"></a></p>
+		</div>
+		<div class="span-4-6 no-pad">
+			<a href="http://www.prazor.com/">
+				<img src="https://www.prazor.com/images/logo.svg" style="width:50%">
+			</a>
+		</div>
+		<div class="span-1-6">&nbsp;</div>
 	</div>
+
 	<div class="span-1-1 c large no-pad no-margin">
-		<span class="b color-white large">Donate</span>
+		<h1 class="b color-white normal">Donate</h1>
 	</div>
 </div>
 
