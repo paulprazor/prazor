@@ -11,14 +11,19 @@
 	<link rel="stylesheet" type="text/css" href="css/player-volume-control.css">
 	<link rel="stylesheet" type="text/css" href="css/subNav.css">
 
+	<style>
+		.headerContaner{ position: fixed; background-color: #1B1B1B; z-index: 9999; }
+		.subNavContainer{ margin-top: 110px }
+	</style>
+
 	<script src="phonegap.js"></script>
 </head>
 <body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}">
 	<div class="page-sidebar" ng-show="showSidebar" ng-include='"partials/userDetails.html"' style="height:{{windowHeight}}px"></div>		
 	<!-- ng-style="{'width': pageWidth, 'left': leftPos}"  -->
 	<div class="grid page-container no-pad" ng-show="!showSidebar">
-		<div class="span-1-1 no-pad" ng-include='"templates/header.html"'></div>
-		<div class="span-1-1 no-pad" ng-include='"templates/subNav.html"'></div>
+		<div class="span-1-1 no-pad headerContaner" ng-include='"templates/header.html"'></div>
+		<div class="span-1-1 no-pad subNavContainer" ng-include='"templates/subNav.html"'></div>
 		<div class="span-1-1 no-pad" ng-class="{'playerMargin' : !hidePlayerBar}" ng-view ng-cloak></div>						
 	</div>
 	<audio-playerbar data-currentStation="currentStation"></audio-playerbar>
