@@ -1,27 +1,23 @@
 <div class="grid">
-	<div class="span-1-1 c">
-		<img class="user-avatar" ng-src="images/heart_icon.svg">		
-	</div>
-	<div class="span-1-1 c">
-		<span class="b color-white">{{user.fName}} {{user.lName}}</span>
+	<div class="span-1-1 c top-space">
+		<div class="span-1-6">
+			<p><a href="" onclick="window.history.back(); return false;"><img src="/images/back_arrow_icon.svg"></a></p>
+		</div>
+		<div class="span-4-6 no-pad">
+			<a href="" onclick="window.history.back(); return false;">
+				<img src="https://www.prazor.com/images/logo.svg" style="width:50%">
+			</a>
+		</div>
+		<div class="span-1-6">&nbsp;</div>
 	</div>
 </div>
 <div class="grid">
 	<div class="span-1-1">
 		<div class="user-info">
 			<ul class="blocked unstyled vertical-list">
-				<li>
-					<span class="block color-white bottom-line light-grey-line">Donations</span>
-					<span class="color-gold b">Lorem Ipsum Sit Amet</span>
-				</li>
-				<li>
-					<span class="block color-white bottom-line light-grey-line">Account Information</span>
-					<span class="color-gold b">Update Username/Password</span>
-				</li>
-				<li>
-					<span class="block color-white bottom-line light-grey-line">Feedback</span>	
-					<span class="color-gold b">Report a Problem</span>
-				</li>
+				<li><a href="https://donate.prazor.com/" target="_blank" class="block color-white" onclick="window.open(this.href,'_system'); return false;">Donations</a></li>
+				<li><a class="block color-white" href="mailto:support@prazor.com" onclick="window.open(this.href,'_system'); return false;">Feedback</a></li>
+				<li><a class="block color-white" href="http://prazor.com/terms" onclick="window.open(this.href,'_system'); return false;">Terms of Use</a></li>
 			</ul>
 		</div>	
 	</div>

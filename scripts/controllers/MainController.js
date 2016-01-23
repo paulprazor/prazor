@@ -10,7 +10,7 @@
 		$scope.$on('$routeChangeStart', function(next, current) {		   
 		   	var currenlocation = $location.url();		   
 		   	$scope.activeSubNav = currenlocation.slice(1).split('/')[0];		   	
-		   	$scope.quickMenuItem = (currenlocation.slice(1).split('/')[1] && currenlocation.slice(1).split('/')[1] !== 'genres') ? 'back_arrow' : '';
+		   	$scope.quickMenuItem = (currenlocation.slice(1).split('/')[1] && currenlocation.slice(1).split('/')[1] !== 'genres') ? 'back_arrow' : 'menu';
 		   	$scope.playerType = (currenlocation.slice(1).split('/')[1] === 'audioplayer') ? 'large' : 'small';
 
 		    if (typeof(current) !== 'undefined'){
