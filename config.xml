@@ -3,8 +3,8 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "G9BX6QRCL3.com.sevengage.prazor"
-        version   = "1.0.25">
+        id        = "com.sevengage.prazor"
+        version   = "1.0.26">
 
     <name>Prazor</name>
 
@@ -74,18 +74,18 @@
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
-    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="res/icon/android/36x36.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/icon/android/48x48.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/icon/android/72x72.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/icon/android/96x96.png"  gap:platform="android"    gap:qualifier="xhdpi" />
     
-    <icon src="res/icon/ios/57x57_6p_v03.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="res/icon/ios/72x72_6p_v03.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="res/icon/ios/114x114_6p_v03.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="res/icon/ios/144x144_6p_v03.png"         gap:platform="ios"        width="144" height="144" />
+    <icon src="res/icon/ios/57x57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/icon/ios/72x72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/114x114.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/icon/ios/144x144.png"         gap:platform="ios"        width="144" height="144" />
     
-    <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="res/icon/win/48x48.png"  gap:platform="winphone" />
+    <icon src="res/icon/win/173x173.png" gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
@@ -93,13 +93,12 @@
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
     
-    <gap:splash src="res/screen/ios/LaunchScreen_3_Port.png"         gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="res/screen/ios/LaunchScreen_4_Port.png"      gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/screen/ios/LaunchScreen_5_Port.png"            gap:platform="ios"     width="640" height="1136" />
-    <gap:splash src="res/screen/ios/LaunchScreen_iPad_Port.png"           gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/screen/ios/LaunchScreen_iPad_Lndscp.png"          gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     
-    <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
+    <gap:splash src="res/screen/win/screen-portrait.jpg"      gap:platform="winphone" />
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
