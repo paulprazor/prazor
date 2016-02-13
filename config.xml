@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.sevengage.prazor"
-        version   = "1.0.28">
+        version   = "1.1.0">
 
     <name>Prazor</name>
 
@@ -70,6 +70,9 @@
 
     <!-- background audio plugin -->
     <plugin name="nl.x-services.plugins.backgroundaudio" spec="1.0.0" source="pgb" />
+
+    <!-- now playing plugin -->
+    <plugin name="com.silverorange.now-playing" spec="1.0.0" source="pgb" />
 
 
     <!-- Define app icon for each platform. -->
