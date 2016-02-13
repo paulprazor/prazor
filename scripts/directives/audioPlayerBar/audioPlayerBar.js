@@ -58,18 +58,59 @@
 			                }, 5000);
 						}
 
-					//nowPlayingiOS(song);
+					nowPlayingiOS(song);
 				}
 
-				// updates the now playing native for iOS
-				// function nowPlayingiOS (song) {
-				// 	var nowPlaying = window.plugins.nowPlaying,
-				// 		artist = song.artist,
-				// 		title = song.title,
-				// 		album = song.album;
+				
+				window.audioplayer.configure( successCallback, failureCallback);
 
-				// 	nowPlaying.updateMetas(artist,title,station);
-				// }
+				var successCallback = function(result) {
+						console.log('audio callback ' + JSON.stringify(result));
+					if (result.type==='progress') {
+						console.log('progress/duration/available - ' + result.progress + '/' + result.duration + '/' + result.available); // available not currently supported  
+					} else if (result.type==='state') {
+						console.log('status - ' + result.state + '/' + result.description);
+					} else if (result.type==='error') {
+						console.log('error - ' + result.reason);
+					} else if (result.type==='current') {
+						console.log('current audio ' + JSON.stringify(result.audio));
+					} else if (result.type==='next') {
+						console.log('skip to next audio track'); // typically fired by remote control/lock screen controls  
+					} else if (result.type==='previous') {
+						console.log('skip to previous track'); // typically fired by remote/control/lock screen controls
+					} else {
+						console.log('AudioCallback unhandled type (' + result.type + ')');
+					}
+				};
+
+
+				// updates the now playing native for iOS
+				function nowPlayingiOS (song) {
+					var artist = song.artist,
+						title = song.title,
+						album = song.album,
+						cover = song.cover;
+
+
+					//nowPlaying.updateMetas(artist,title,station);
+
+					window.audioplayer.setaudioinfo( successCallback,
+						failureCallback,
+							// metadata used for iOS lock screen, Android 'Now Playing' notification  
+							{
+								"title": title,
+								"artist": artist,
+								"image": {
+									"url": cover
+								},
+									"imageThumbnail": {
+									"url": cover
+								},
+									"name": "Prazor",
+									"description": ""
+								}
+							);
+				}
 
 
 
