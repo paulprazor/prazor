@@ -58,18 +58,18 @@
 			                }, 5000);
 						}
 
-					nowPlayingiOS(song);
+					//nowPlayingiOS(song);
 				}
 
 				// updates the now playing native for iOS
-				function nowPlayingiOS (song) {
-					var nowPlaying = window.plugins.nowPlaying,
-						artist = song.artist,
-						title = song.title,
-						album = song.album;
+				// function nowPlayingiOS (song) {
+				// 	var nowPlaying = window.plugins.nowPlaying,
+				// 		artist = song.artist,
+				// 		title = song.title,
+				// 		album = song.album;
 
-					nowPlaying.updateMetas(artist,title,station);
-				}
+				// 	nowPlaying.updateMetas(artist,title,station);
+				// }
 
 
 
