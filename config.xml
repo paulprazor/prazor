@@ -72,7 +72,7 @@
     <plugin name="nl.x-services.plugins.backgroundaudio" spec="1.0.0" source="pgb" />
 
     <!-- now playing plugin -->
-    <plugin name="com.silverorange.now-playing" spec="1.0.0" source="pgb" />
+    <plugin name="NowPlaying" value="NowPlaying" />
 
 
     <!-- Define app icon for each platform. -->
