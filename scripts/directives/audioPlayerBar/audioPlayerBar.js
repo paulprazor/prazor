@@ -145,15 +145,16 @@
 
 				// builds the player
 				function buildPlayer (response){
-					var source = M3U.parse(response.data)
+					var source = M3U.parse(response.data);
 					
-					source = source[0].file
+					source = source[0].file;
 
 					if(!scope.audio){
 						scope.audio = document.createElement("audio");
-					}					
+					}
 
-					scope.audio.setAttribute('src', source); //change the source
+					scope.audio.setAttribute("src", source); //change the source
+					scope.audio.setAttribute("type", "audio/mpeg");
 					scope.audio.load(); //load the new source
 					scope.audio.play(); //play
 
@@ -162,14 +163,14 @@
 				}
 
 
-
 				function setStationDetails(index, currentStation){
 					var details = {};
 					details.station = currentStation.stations[index];
 					details.index = (index);
 					details.stations = currentStation.stations;
-					setStation(details);					
+					setStation(details);
 				}
+
 
 				function stopAudio(){
 					scope.audio.pause();
@@ -195,6 +196,7 @@
 				});
 
 				scope.playing = true;
+				
 				setPlayPauseBtn(scope.playing);
 				
 				scope.previous = function(currentStation){
