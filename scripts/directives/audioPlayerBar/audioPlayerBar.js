@@ -148,15 +148,20 @@
 					var source = M3U.parse(response.data);
 					
 					source = source[0].file;
-console.log(source)
+
 					if(!scope.audio){
 						scope.audio = document.createElement("audio");
 					}
-console.log(scope.audio)
+
 					scope.audio.setAttribute("src", source); //change the source
 					scope.audio.setAttribute("type", "audio/mpeg");
+					scope.audio.setAttribute("autoplay", true);
 					scope.audio.load(); //load the new source
-					scope.audio.play(); //play
+
+					//play 
+					scope.audio.addEventListener("load", function() {
+						scope.audio.play();
+					}, true);
 
 					scope.playing = true;
 					setPlayPauseBtn(scope.playing);
