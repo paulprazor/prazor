@@ -37,5 +37,7 @@ app.onDeviceReady = function() {
 	angular.element(document).ready(function() {
 		angular.bootstrap(document);
 	});
+
+	window.analytics.startTrackerWithId('UA-73794751-1');
 };
 

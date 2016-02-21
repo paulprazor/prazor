@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.sevengage.prazor"
-        version   = "1.2.1">
+        version   = "1.2.2">
 
     <name>Prazor</name>
 
@@ -65,6 +65,9 @@
     <!-- now playing plugin -->
     <!-- <plugin name="NowPlaying" value="NowPlaying" /> -->
     <!-- <plugin name="org.nypr.cordova.playerhaterplugin" spec="0.1.0" source="pgb" /> -->
+
+    <!-- google analytics -->
+    <plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
 
 
 
