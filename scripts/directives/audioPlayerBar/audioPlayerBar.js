@@ -55,7 +55,7 @@
 							$timeout.cancel(timer);
 							timer = $timeout(function() {
 			                    getStationDetails(scope.currentStation.station);
-			                }, 5000);
+			                }, 1000);
 						}
 
 					//nowPlayingiOS(song);
