@@ -1,9 +1,8 @@
 (function(){
-	app.controller('MainController', ['$scope', '$sce', '$location', '$templateCache', function ($scope, $sce, $location, $templateCache) {
+	app.controller('MainController', ['$scope', '$sce', '$location', '$templateCache', '$timeout',
+		function ($scope, $sce, $location, $templateCache, $timeout) {
 		$scope.showSidebar = false;		
 		$scope.menuItem = 'menu';
-		$scope.currentStation = {};
-		$scope.currentCategory = {};
 		$scope.stopAudio = false;		
 		
 		$scope.$on('$routeChangeStart', function(next, current) {		   
@@ -15,6 +14,7 @@
 		    if (typeof(current) !== 'undefined'){
 	            $templateCache.remove(current.templateUrl);
 	    	}
+	    	$('#slaask-button').addClass('hide');
 		});
 
 		$scope.$on('stopAudio', function(next, current) {
@@ -27,18 +27,18 @@
 
 		$scope.quickMenu = function(item){
 			if(item === 'menu' || item === 'genres'){
-				$scope.showSidebar = !$scope.showSidebar;				
+				$scope.showSidebar = !$scope.showSidebar;
+				$('#slaask-button').toggleClass('hide');			
 			}
 			else{
 				window.history.back();
 			}
 		};
 
-		$scope.user = {
-			fName : 'John',
-			lName : 'Doe',
-			email : 'john_doe@mail.com'
-		};
+		$timeout(function() {
+            $('#slaask-button').addClass('hide');
+        }, 1000);
+		
 		
     }]);
 })();
