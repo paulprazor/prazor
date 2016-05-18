@@ -1,9 +1,11 @@
 (function(){
-	app.controller('MainController', ['$scope', '$sce', '$location', '$templateCache', '$timeout',
-		function ($scope, $sce, $location, $templateCache, $timeout) {
+	app.controller('MainController', ['$scope', '$sce', '$location', '$templateCache', '$timeout', '$window',
+	function ($scope, $sce, $location, $templateCache, $timeout, $window) {
+		var activeHelper = false;
 		$scope.showSidebar = false;		
 		$scope.menuItem = 'menu';
-		$scope.stopAudio = false;		
+		$scope.stopAudio = false;
+		$scope.stickyNavHeight = 110;
 		
 		$scope.$on('$routeChangeStart', function(next, current) {		   
 		   	var currenlocation = $location.url();		   
@@ -28,6 +30,10 @@
 		$scope.quickMenu = function(item){
 			if(item === 'menu' || item === 'genres'){
 				$scope.showSidebar = !$scope.showSidebar;
+				if(!activeHelper){
+					_slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
+					activeHelper = true;
+				}
 				$('#slaask-button').toggleClass('hide');			
 			}
 			else{
@@ -35,7 +41,25 @@
 			}
 		};
 
+		angular.element($window).bind('resize', function(){
+		    $scope.$apply();
+		});
+
+	    $scope.getOrientation = function(){
+	        var w = $window.innerWidth,
+	            h = $window.innerHeight;
+	        var orientation = (w > h) ? 'landscape' : 'portrait'
+	        return (w > h) ? 'landscape' : 'portrait';
+
+	    };
+
+	    $scope.$watch($scope.getOrientation, function(newValue, oldValue){
+	        $scope.orientation = newValue;
+	        $scope.stickyNavHeight = $('.headerContaner').height();
+	    }, true);
+
 		$timeout(function() {
+			$scope.stickyNavHeight = $('.headerContaner').height();	
             $('#slaask-button').addClass('hide');
         }, 1000);
 		
