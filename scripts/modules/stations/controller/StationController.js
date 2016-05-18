@@ -34,7 +34,7 @@
 			}
 			else{
 				$scope.currentStation = DataFactory.currentStation;
-				$scope.station = DataFactory.station;
+				$scope.station = DataFactory.currentStation.station;
 				var entryID = DataFactory.currentStation.genre.entry_id,
 					config = {
 					method : 'GET',

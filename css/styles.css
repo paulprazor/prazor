@@ -21,7 +21,6 @@ ul > li{
 }
 
 .headerContaner{ position: fixed; background-color: #111; z-index: 9999; }
-.subNavContainer{ margin-top: 110px }
 
 .openSideBar {
     position: absolute;
