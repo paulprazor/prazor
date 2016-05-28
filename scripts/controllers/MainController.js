@@ -17,6 +17,7 @@
 	            $templateCache.remove(current.templateUrl);
 	    	}
 	    	$('#slaask-button').addClass('hide');
+	    	$('.slaask-message').addClass('hide');	
 		});
 
 		$scope.$on('stopAudio', function(next, current) {
@@ -34,7 +35,8 @@
 					_slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
 					activeHelper = true;
 				}
-				$('#slaask-button').toggleClass('hide');			
+				$('#slaask-button').toggleClass('hide');
+				$('.slaask-message').toggleClass('hide');			
 			}
 			else{
 				window.history.back();
