@@ -6,7 +6,7 @@
 	<meta charset='utf-8'>
 
 	<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, user-scalable=0" />	
-	<title>Prazor</title>
+	<title>Prazor App</title>
 	<link rel="stylesheet" type="text/css" href="css/framework-mx.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/angular-carousel.css">
@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/player-volume-control.css">
 	<link rel="stylesheet" type="text/css" href="css/subNav.css">
 
-	<!-- <script src="phonegap.js"></script> -->
+	<script src="phonegap.js"></script>
 	<!--<script src="scripts/NowPlaying.js"></script>-->
 </head>
 <body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}">
@@ -22,7 +22,7 @@
 	<!-- ng-style="{'width': pageWidth, 'left': leftPos}"  -->
 	<div class="grid page-container no-pad" ng-show="!showSidebar">
 		<div class="span-1-1 no-pad headerContaner" ng-include='"templates/header.html"'></div>
-		<div class="span-1-1 no-pad subNavContainer" ng-include='"templates/subNav.html"' style="margin-top:{{stickyNavHeight}}px"></div>
+		<!-- <div class="span-1-1 no-pad subNavContainer" ng-include='"templates/subNav.html"'></div> -->
 		<div class="span-1-1 no-pad" ng-class="{'playerMargin' : !hidePlayerBar}" ng-view ng-cloak></div>						
 	</div>
 	<audio-playerbar data-currentStation="currentStation"></audio-playerbar>
@@ -37,7 +37,7 @@
 	<script src="scripts/angular-carousel.min.js"></script>
 	<script src="scripts/angular-sanitize.js"></script>
 	<script src="scripts/slick.min.js"></script>
-	<script src="http://cdnapi.kaltura.com/p/1949551/sp/194955100/embedIframeJs/uiconf_id/30806841/partner_id/1949551"></script>
+	<!--<script src="http://cdnapi.kaltura.com/p/1949551/sp/194955100/embedIframeJs/uiconf_id/30806841/partner_id/1949551"></script>-->
 	<script src="scripts/plugins/parser.min.js"></script>
 	<!-- Our Website Javascripts -->
 	<script src="scripts/app.js"></script>
@@ -51,16 +51,12 @@
 	<script src="scripts/modules/talk/controller/TalkCategoriesController.js"></script>
 	<script src="scripts/modules/talk/controller/TalkController.js"></script>
 	<script src="scripts/controllers/PlaylistController.js"></script>
-	<script src="scripts/controllers/VideoController.js"></script>
+	<!--<script src="scripts/controllers/VideoController.js"></script>-->
 	<script src="scripts/modules/pageError/controller/PageErrorController.js"></script>
 	<script src="scripts/directives/audioPlayerBar/audioPlayerBar.js"></script>
 
 	<script>
         app.initialize();
     </script>
-    <script src='https://cdn.slaask.com/chat.js'></script>
-	<script>
-	    // _slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
-	</script>
 </body>
 </html>
