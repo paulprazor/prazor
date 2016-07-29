@@ -43,7 +43,7 @@
     <!--
         Define a specific version of PhoneGap to build into your app.
     -->
-    <preference name="phonegap-version" value="cli-5.2.0" />
+    <preference name="phonegap-version" value="cli-6.3.0" />
 
     <!-- Plugins -->
 
@@ -134,7 +134,7 @@
 
     <!-- Android config -->
     <platform name="android">
-        <allow-intent href="market:*" />
+        <!-- <allow-intent href="market:*" /> -->
          <config-file target="AndroidManifest.xml" parent="/*">
             <supports-screens
                 android:xlargeScreens="true"
