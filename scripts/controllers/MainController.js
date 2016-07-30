@@ -24,21 +24,39 @@
 			$scope.$broadcast('stoppingAudio');
 		});
 
+		// fun background random color chooser
+		$scope.backgroundColor = function(){
+			var colorArray = [
+					"left top",
+					"center top",
+					"right top",
+					"center center",
+					"left bottom",
+					"right bottom",
+				],
+				randomPosition = Math.floor(Math.random()*colorArray.length);
+
+			return {"background-position": colorArray[randomPosition]};
+		};
+
 		$scope.closeSideBar = function(){
 			$scope.showSidebar = false;
-		}
+		};
 
 		$scope.quickMenu = function(item){
 			if(item === 'menu' || item === 'genres'){
 				$scope.showSidebar = !$scope.showSidebar;
 				if(!activeHelper){
-					_slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
+					if(window._slaask){
+						_slaask.init('5de41f8d3e3bf771cc8ac707c8502535');
+					}
+					
 					activeHelper = true;
 				}
 				$('#slaask-button').toggleClass('hide');
-				$('.slaask-message').toggleClass('hide');			
-			}
-			else{
+				$('.slaask-message').toggleClass('hide');
+			
+			}else{
 				window.history.back();
 			}
 		};

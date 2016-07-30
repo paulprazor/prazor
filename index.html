@@ -17,7 +17,7 @@
 	<script src="phonegap.js"></script>
 	<!--<script src="scripts/NowPlaying.js"></script>-->
 </head>
-<body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}">
+<body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}" ng-style="backgroundColor()">
 	<div class="page-sidebar" ng-show="showSidebar" ng-include='"partials/userDetails.html"' style="height:{{windowHeight}}px"></div>		
 	<!-- ng-style="{'width': pageWidth, 'left': leftPos}"  -->
 	<div class="grid page-container no-pad" ng-show="!showSidebar">
