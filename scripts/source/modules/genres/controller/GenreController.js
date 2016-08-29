@@ -5,7 +5,7 @@
 		
 		var config = {
 			method : 'GET',
-			url : 'http://prazor.com/rest/getGenres/'
+			url : 'http://prazor.com/rest-dev/getGenres/'
 		}
 
 		dataService.getData(config).then(

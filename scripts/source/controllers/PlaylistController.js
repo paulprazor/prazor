@@ -67,6 +67,7 @@
 		$scope.playVideo = function(video){
 			var location = $location.url(),
 				currentLocation = location.slice(1).split('/')[0];
+				
 			DataFactory.currentCategory.video = video;
 			DataFactory.currentCategory.playlist = $scope.playlist;
 			$location.url(currentLocation + '/video');

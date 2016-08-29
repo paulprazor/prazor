@@ -7,53 +7,56 @@
 
 	<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, user-scalable=0" />	
 	<title>Prazor App</title>
-	<link rel="stylesheet" type="text/css" href="css/framework-mx.css">
+	
+	<link rel="stylesheet" type="text/css" href="http://prazor.com/app/css/include/prazor-min.css">
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/framework-mx.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/angular-carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/player-volume-control.css">
-	<link rel="stylesheet" type="text/css" href="css/subNav.css">
+	<link rel="stylesheet" type="text/css" href="css/subNav.css"> -->
 
 	<script src="phonegap.js"></script>
 	<!--<script src="scripts/NowPlaying.js"></script>-->
 </head>
-<body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}" ng-style="backgroundColor()">
-	<div class="page-sidebar" ng-show="showSidebar" ng-include='"partials/userDetails.html"' style="height:{{windowHeight}}px"></div>		
+<body ng-controller="MainController" ng-swipe-left="showSidebar = false" class="player-view-{{playerType}}">
+	<div class="page-sidebar" ng-show="showSidebar" ng-include='"http://prazor.com/app/partials/userDetails.html"' style="height:{{windowHeight}}px"></div>		
 	<!-- ng-style="{'width': pageWidth, 'left': leftPos}"  -->
 	<div class="grid page-container no-pad" ng-show="!showSidebar">
-		<div class="span-1-1 no-pad headerContaner" ng-include='"templates/header.html"'></div>
+		<div class="span-1-1 no-pad headerContaner" ng-include='"http://prazor.com/app/templates/header.html"'></div>
 		<!-- <div class="span-1-1 no-pad subNavContainer" ng-include='"templates/subNav.html"'></div> -->
-		<div class="span-1-1 no-pad" ng-class="{'playerMargin' : !hidePlayerBar}" ng-view ng-cloak></div>						
+		<div class="span-1-1 no-pad" ng-class="{'playerMargin' : !hidePlayerBar}" ng-view ng-cloak></div>
 	</div>
 	<audio-playerbar data-currentStation="currentStation"></audio-playerbar>
 	
-	<!-- Vendor: Javascripts -->
-	<script src="scripts/jquery.min.js"></script>
+	<script src="http://prazor.com/app/scripts/include/prazor-min.js"></script>
 
-	<!-- Vendor: Angular, followed by our custom Javascripts -->
+	<!-- Vendor: Angular, followed by our custom Javascripts 
+	<script src="scripts/jquery.min.js"></script>
 	<script src="scripts/angular.min.js"></script>
 	<script src="scripts/angular-route.min.js"></script>
 	<script src="scripts/angular-touch.min.js"></script>
 	<script src="scripts/angular-carousel.min.js"></script>
 	<script src="scripts/angular-sanitize.js"></script>
 	<script src="scripts/slick.min.js"></script>
-	<!--<script src="http://cdnapi.kaltura.com/p/1949551/sp/194955100/embedIframeJs/uiconf_id/30806841/partner_id/1949551"></script>-->
+	<!--<script src="http://cdnapi.kaltura.com/p/1949551/sp/194955100/embedIframeJs/uiconf_id/30806841/partner_id/1949551"></script>
 	<script src="scripts/plugins/parser.min.js"></script>
-	<!-- Our Website Javascripts -->
+	<!-- Our Website Javascripts 
 	<script src="scripts/app.js"></script>
 	<script src="scripts/services/xml2json.min.js"></script>
 	<script src="scripts/services/dataService.js"></script>
 	<script src="scripts/controllers/MainController.js"></script>
 	<script src="scripts/modules/genres/controller/GenreController.js"></script>
 	<script src="scripts/modules/stations/controller/StationController.js"></script>
-	<script src="scripts/modules/teaching/controller/TeachingController.js"></script>
+	<!--<script src="scripts/modules/teaching/controller/TeachingController.js"></script>
 	<script src="scripts/modules/teaching/controller/TeachingCategoriesController.js"></script>
 	<script src="scripts/modules/talk/controller/TalkCategoriesController.js"></script>
 	<script src="scripts/modules/talk/controller/TalkController.js"></script>
 	<script src="scripts/controllers/PlaylistController.js"></script>
-	<!--<script src="scripts/controllers/VideoController.js"></script>-->
+	<!--<script src="scripts/controllers/VideoController.js"></script>
 	<script src="scripts/modules/pageError/controller/PageErrorController.js"></script>
-	<script src="scripts/directives/audioPlayerBar/audioPlayerBar.js"></script>
+	<script src="scripts/directives/audioPlayerBar/audioPlayerBar.js"></script> -->
 
 	<script>
         app.initialize();

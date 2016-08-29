@@ -3,7 +3,7 @@
 		function ($sce, dataService, $timeout, DataFactory){
 		return {
 			restrict: 'E',
-			templateUrl: 'scripts/directives/audioPlayerBar/view/audioPlayerBar.html',
+			templateUrl: 'http://prazor.com/app/scripts/source/directives/audioPlayerBar/view/audioPlayerBar.html',
 			scope: {},
 			link: function(scope, element, attr){
 
@@ -49,6 +49,7 @@
 							timer = $timeout(function() {
 			                    getStationPlaylistDetails(scope.currentStation.station);
 			                }, timeout);
+			                scope.playerHeight = $(element).find('.player-bar').height();
 						}
 						else{
 							$timeout.cancel(timer);
@@ -65,7 +66,7 @@
 					// Call to get Playlist details
 					var config = {
 						method : 'GET',
-						url : 'https://streamdb6web.securenetsystems.net/player_status_update/' + station.station_id + '_history.txt'
+						url : station.station_history_url
 					};
 					
 					dataService.getPlaylistDetails(config).then(
@@ -130,7 +131,7 @@
 				
 				scope.currentStation = DataFactory.currentStation;
 				scope.hidePlayerBar = true;
-
+				scope.playerHeight = $(element).find('.player-bar').height();
 				// Watches Index to change station
 				scope.$watch('currentStation.$index', function (index, oldIndex) {
 					if (index !== oldIndex && DataFactory.currentStation.stations) {

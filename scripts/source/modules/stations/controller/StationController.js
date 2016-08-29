@@ -38,7 +38,7 @@
 				var entryID = DataFactory.currentStation.genre.entry_id,
 					config = {
 					method : 'GET',
-					url : 'http://prazor.com/rest/getGenres/details/' + entryID
+					url : 'http://prazor.com/rest-dev/getGenres/details/' + entryID
 				};
 
 				dataService.getData(config).then(
