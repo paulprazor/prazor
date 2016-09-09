@@ -60,6 +60,15 @@
 
 	<script>
         app.initialize();
+
+		window.addEventListener('load', function () {
+			$(document).on('click', 'a[target="_system"],a[target="_blank"]', function (e) {
+				var url = this.href;
+				e.preventDefault();
+				window.open(url,"_system");
+			});
+		}, false);
+
     </script>
 </body>
 </html>
